@@ -45,6 +45,7 @@ function App() {
           <Card></Card>
           <Card></Card>
           <Card></Card>
+          <Card></Card>
         </Container>
       </div>
       <Footer />
