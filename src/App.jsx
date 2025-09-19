@@ -1,6 +1,6 @@
-import { useState } from 'react'
 import './App.css'
 import Menu from './components/Menu'
+import Footer from './components/Footer'
 import { Title, Paragraph, Container, Image, Button } from './components/pageComponents'
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
           <Image src="https://www.fmt.se/wp-content/uploads/2023/02/logo-placeholder-image.png" height={"50vh"}></Image>
         </Container>
       </Container>
+      <Footer/>
     </>
   )
 }
