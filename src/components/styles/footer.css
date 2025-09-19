@@ -1,18 +1,22 @@
 .footer {
     width: 100%;
     padding: 50px;
-    position: absolute;
-    bottom: 0;
+    /* position: absolute; */
+    /* bottom: 0; */
     background-color: #3a5fcd;
     display: grid;
     grid-gap: 10px;
     grid-template-areas: "logo contato endereco" "copy copy copy";
     grid-template-columns: 3fr 2fr 2fr;
 }
-.footer h1, p, li {
+.footer p {
+    color: #ffffff;
+}
+.footer li {
     color: #ffffff;
 }
 .footer h1 {
+    color: #ffffff;
     font-size: 30px;
 }
 .logo {
@@ -24,7 +28,7 @@
 }
 .contatos {
     grid-area: contatos;
-    
+
 }
 .endereco {
     grid-area: endereco;
