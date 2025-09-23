@@ -13,7 +13,7 @@
     flex-wrap: wrap;
     gap: 10px;
 }
-.container :nth-child(n) {
+.container > :nth-child(n) {
     flex: 1 1 0;
 }
 
