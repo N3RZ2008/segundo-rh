@@ -26,3 +26,6 @@
     border-radius: 100%;
     padding: 10px;
 }
+.cardTitle {
+    font-size: 1.5rem;
+}

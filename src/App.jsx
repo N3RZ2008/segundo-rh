@@ -36,20 +36,26 @@ function App() {
       <div className="cardsPage">
         <Title style={{
           fontSize: "2rem",
-        }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Title>
+        }}>OS MELHORES SERVIÇOS DO MERCADO PARA VOCÊ E SEU NEGÓCIO</Title>
         <Title style={{
           fontSize: "4rem",
-        }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Title>
+        }}>TEMOS SOLUÇÕES.</Title>
         <Container style={{
           padding: "25px", flex: 1
         }}>
-          <Card icon={<SmileIcon/>}>
+          <Card 
+          title="Aprimore suas Habilidades Socioemocionais"
+          icon={<SmileIcon/>}>
             Aprenda a entender e gerenciar suas emoções, a se comunicar com mais clareza e a construir relacionamentos mais saudáveis. Nossas ferramentas e atividades são criadas para te ajudar a desenvolver habilidades como empatia, resiliência e autoconhecimento, que são fundamentais tanto na vida pessoal quanto profissional. 
           </Card>
-          <Card icon={<VideoIcon/>}>
+          <Card 
+          title="Cursos e Aulas Informativas"
+          icon={<VideoIcon/>}>
             Navegue por uma vasta biblioteca de conteúdos criados por especialistas. Nossos cursos e aulas abordam temas como direitos celetistas, inteligência emocional e comunicação não violenta, de forma prática e acessível. Você terá acesso a informações valiosas para aplicar no seu dia a dia e se sentir mais preparado para os desafios do mercado de trabalho. 
           </Card>
-          <Card icon={<WalkIcon/>}>
+          <Card 
+          title="Atendimento Pessoal"
+          icon={<WalkIcon/>}>
             Sabemos que cada jornada é única. Por isso, oferecemos a possibilidade de atendimento com profissionais dedicados para te guiar e tirar suas dúvidas de forma individual. Conte com o apoio de quem entende do assunto para traçar um caminho de desenvolvimento personalizado e focado nas suas necessidades. 
           </Card>
         </Container>
