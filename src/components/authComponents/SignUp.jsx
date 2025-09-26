@@ -10,10 +10,13 @@ export default function SignUp() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [isOpen, setIsOpen] = useState(false)
+    const [isChecked, setIsChecked] = useState(false)
     const navigate = useNavigate()
 
     async function handleSubmit(e) {
-        // return alert("Sign up temporarily disabled")
+        if (!isChecked) {
+            return alert("Você precisa estar de acordo com os termos para se registrar")
+        }
         e.preventDefault()
         try {
             const data = await signUp(email, password)
@@ -48,25 +51,42 @@ export default function SignUp() {
             </ul>
 
             <h1 className="terms">4. Privacidade e Proteção de Dados</h1>
-            <li className="terms">Coleta e Uso de Dados: O Capacita Aí se compromete a proteger a privacidade de seus usuários. Coletamos apenas os dados essenciais para o funcionamento da plataforma, como informações de cadastro e dados de uso (quais aulas foram assistidas, por exemplo), com o objetivo de melhorar a experiência do usuário.</li>
-            <li className="terms">Confidencialidade: Nenhum dado pessoal é vendido, alugado ou cedido a terceiros para fins comerciais, exceto quando exigido por lei. Nosso tratamento de dados é regido pela Lei Geral de Proteção de Dados (LGPD).</li>
-            <li className="terms">Segurança: Implementamos medidas de segurança técnicas e administrativas para proteger as informações dos usuários contra acesso não autorizado, alteração, divulgação ou destruição.</li>
+            <ul>
+                <li className="terms">Coleta e Uso de Dados: O Capacita Aí se compromete a proteger a privacidade de seus usuários. Coletamos apenas os dados essenciais para o funcionamento da plataforma, como informações de cadastro e dados de uso (quais aulas foram assistidas, por exemplo), com o objetivo de melhorar a experiência do usuário.</li>
+                <li className="terms">Confidencialidade: Nenhum dado pessoal é vendido, alugado ou cedido a terceiros para fins comerciais, exceto quando exigido por lei. Nosso tratamento de dados é regido pela Lei Geral de Proteção de Dados (LGPD).</li>
+                <li className="terms">Segurança: Implementamos medidas de segurança técnicas e administrativas para proteger as informações dos usuários contra acesso não autorizado, alteração, divulgação ou destruição.</li>
+            </ul>
 
             <h1 className="terms">5. Regras de Conduta do Usuário</h1>
             <p className="terms">Ao utilizar a plataforma, o Usuário se compromete a:</p>
-            <li className="terms">Não violar as leis e regulamentos vigentes no Brasil.</li>
-            <li className="terms">Não praticar atos de pirataria, "hacking" ou qualquer atividade ilegal.</li>
-            <li className="terms">Não postar ou transmitir conteúdo ofensivo, difamatório, ameaçador, obsceno, ou que promova o ódio ou discriminação.</li>
-            <li className="terms">Não enviar "spam" ou publicidade não autorizada.</li>
-            <li className="terms">Não tentar interferir na operação do site, em seus servidores ou redes.</li>
+            <ul>
+                <li className="terms">Não violar as leis e regulamentos vigentes no Brasil.</li>
+                <li className="terms">Não praticar atos de pirataria, "hacking" ou qualquer atividade ilegal.</li>
+                <li className="terms">Não postar ou transmitir conteúdo ofensivo, difamatório, ameaçador, obsceno, ou que promova o ódio ou discriminação.</li>
+                <li className="terms">Não enviar "spam" ou publicidade não autorizada.</li>
+                <li className="terms">Não tentar interferir na operação do site, em seus servidores ou redes.</li>
+            </ul>
 
 
             <h1 className="terms">6. Limitação de Responsabilidade</h1>
             <p className="terms">O Capacita Aí se esforça para manter a plataforma funcionando de forma segura e com conteúdo de alta qualidade, mas não garante que o serviço será ininterrupto, livre de erros ou totalmente seguro. A utilização da plataforma é por conta e risco do Usuário. O Capacita Aí não se responsabiliza por perdas, danos ou prejuízos de qualquer natureza decorrentes do uso ou da impossibilidade de uso de seus serviços.</p>
 
             <h1 className="terms">7. Disposições Finais</h1>
-            <li className="terms">Alterações nos Termos: O Capacita Aí se reserva o direito de modificar estes Termos de Uso a qualquer momento. A versão atualizada entrará em vigor imediatamente após sua publicação.</li>
-            <li className="terms">Lei Aplicável e Foro: Estes Termos de Uso são regidos e interpretados de acordo com a legislação brasileira.</li>
+            <ul>
+                <li className="terms">Alterações nos Termos: O Capacita Aí se reserva o direito de modificar estes Termos de Uso a qualquer momento. A versão atualizada entrará em vigor imediatamente após sua publicação.</li>
+                <li className="terms">Lei Aplicável e Foro: Estes Termos de Uso são regidos e interpretados de acordo com a legislação brasileira.</li>
+            </ul>
+
+            <label className="terms">
+                <input
+                    type="checkbox"
+                    checked={isChecked}
+                    onChange={e => { setIsChecked(e.target.checked) }}
+                />
+                Li e estou de acordo com todos os termos
+            </label>
+
+            <button onClick={handleSubmit} >Registrar</button>
 
         </Modal>
 

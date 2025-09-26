@@ -39,3 +39,11 @@
 h1.terms {
     font-size: 1.5rem;
 }
+
+ul.terms {
+    margin-left: 10px;
+}
+
+label.terms > input {
+    margin-right: 10px;
+}
