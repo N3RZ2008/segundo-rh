@@ -6,7 +6,7 @@ export default function Homepage() {
     return (
         <>
             <Container style={
-                { "height": "60vh", "alignItems": "center", padding: "2vw" }
+                { minHeight: "60vh", "alignItems": "center", padding: "2vw" }
             }>
                 <Container style={
                     { flexDirection: 'column' }
