@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
+
 import { signIn, signOut } from "../../auth/useAuth"
+
 import { Container } from "../pageComponents"
 
 export default function Login({ logout = false }) {
@@ -33,11 +35,15 @@ export default function Login({ logout = false }) {
 
     return (
         <>
+            <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+                modal
+            </Modal>
+
             <Container style={
                 { height: "70vh", flexDirection: "column", alignItems: "center", }
             }>
                 <div style={
-                    { display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "10px"}
+                    { display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "10px" }
                 }>
                     <h1 style={
                         { fontSize: "4rem", }

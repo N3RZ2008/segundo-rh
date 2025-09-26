@@ -1,0 +1,41 @@
+.modal {
+    background-color: hsla(0, 0%, 0%, 0.7);
+    height: 70vh;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    z-index: 9999;
+}
+
+.modalBackground {
+    background-color: hsla(0, 0%, 0%, 0.3);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 70px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.terms {
+    margin: 10px 0;
+    color: white;
+}
+
+h1.terms {
+    font-size: 1.5rem;
+}
