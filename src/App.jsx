@@ -5,15 +5,19 @@ import Footer from './components/Footer'
 import Homepage from "./components/Homepage";
 import AboutUs from "./components/AboutUs";
 
+import Login from "./components/authComponents/LogIn";
+import SignUp from "./components/authComponents/SignUp";
+
 import './App.css'
 import "./components/styles/cards.css"
+import AuthProvider from "./components/authComponents/AuthProvider";
 
 function Layout() {
-	return <>
+	return <AuthProvider>
 		<Menu />
 		<Outlet />
 		<Footer />
-	</>
+	</AuthProvider>
 }
 
 const router = createBrowserRouter([
@@ -21,7 +25,10 @@ const router = createBrowserRouter([
 		element: <Layout />,
 		children: [
 			{ path: "/", element: <Homepage /> },
-			{ path: "/sobre", element: <AboutUs />}
+			{ path: "/sobre", element: <AboutUs />},
+			{ path: "/signup", element: <SignUp /> },
+			{ path: "/login", element: <Login /> },
+			{ path: "/logout", element: <Login logout={true} /> }
 		]
 	}
 ])
