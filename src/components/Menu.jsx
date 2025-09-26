@@ -1,16 +1,19 @@
 import { useContext } from "react";
+import { Link } from "react-router";
+
 import "./styles/menu.css";
 
 
 function Menu() {
-    return(
+    return (
         <div className="menu">
-            <div className="logo">segundoRH</div>
+            <Link to={"/"}>
+                <div className="logo">segundoRH</div>
+            </Link>
             <div className="nav">
-                <div className="menuItem">Item 1</div>
-                <div className="menuItem">Item 2</div>
-                <div className="menuItem">item 3</div>
-                <div className="menuItem">item 4</div>
+                <Link to={"/sobre"}>
+                    <div className="menuItem">Sobre Nós</div>
+                </Link>
             </div>
         </div>
     )

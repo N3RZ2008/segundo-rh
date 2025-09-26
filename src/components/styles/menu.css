@@ -21,6 +21,14 @@
     gap: 2vw;
 }
 
+.menu > a {
+    text-decoration: none;
+}
+
+.nav > a {
+    text-decoration: none;
+}
+
 .menuItem {
     display: flex;
     height: fit-content;
