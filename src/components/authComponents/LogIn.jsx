@@ -35,10 +35,6 @@ export default function Login({ logout = false }) {
 
     return (
         <>
-            <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-                modal
-            </Modal>
-
             <Container style={
                 { height: "70vh", flexDirection: "column", alignItems: "center", }
             }>
