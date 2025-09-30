@@ -1,5 +1,5 @@
-import { Title, Paragraph, Container, Image, Button } from './pageComponents'
-
+import { Title, Paragraph, Container, Image, Button } from "./pageComponents"
+import team from "../assets/team.jpg"
 
 export default function AboutUs() {
     return (
@@ -31,7 +31,7 @@ export default function AboutUs() {
                 <Container style={{
                     "height": "100%", alignContent: "center"
                 }}>
-                    <Image src="https://www.conpec.com.br/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Falvorada.73e560de.jpg&w=1080&q=75"></Image>
+                    <Image src={team}></Image>
                 </Container>
             </Container>
             <Container style={
