@@ -1,15 +1,17 @@
 .cardsPage {
     margin: 10px 0;
     padding: 30px 100px;
-    background-color: #3a5fcd;
+    background-image: linear-gradient(to bottom, #3a5fcd, white);
     text-align: center;
     min-height: 55vh;
     display: flex;
     flex-direction: column;
 }
+
 .cardsPage h1 {
     color: #ffffff;
 }
+
 .card {
     background-color: #ffffff;
     border-radius: 30px;
@@ -19,10 +21,12 @@
     align-items: center;
     gap: 30px;
 }
+
 .card:hover {
     transform: translateY(-2px);
     transition: transform 0.5s;
 }
+
 .cardImg {
     background-color: #3a5fcd;
     width: 100px;
@@ -30,6 +34,7 @@
     border-radius: 100%;
     padding: 10px;
 }
+
 .cardTitle {
     font-size: 1.5rem;
     font-weight: 700;
