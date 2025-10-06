@@ -4,7 +4,9 @@ import { Link, useNavigate } from "react-router-dom"
 import { signUp } from "../../auth/useAuth"
 
 import Modal from "../Modal"
-import { Container } from "../pageComponents"
+
+import bg from "../../assets/bg.jpg"
+import "../styles/form.css"
 
 export default function SignUp() {
     const [email, setEmail] = useState("")
@@ -90,16 +92,28 @@ export default function SignUp() {
 
         </Modal>
 
-        <Container style={
-            { height: "70vh", flexDirection: "column", alignItems: "center", }
+        <div style={
+            {
+                display: "flex",
+                justifyContent: "center",
+                height: "70vh",
+                flexDirection: "column",
+                alignItems: "center",
+                backgroundImage: `url(${bg})`
+            }
         }>
-            <div style={
-                { display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "10px" }
-            }>
+            <div className="formDiv">
                 <h1 style={
-                    { fontSize: "4rem" }
+                    { fontSize: "4rem", }
                 }>Registrar</h1>
-                <form>
+                <form style={
+                    {
+                        display: "flex",
+                        flexDirection: "column",
+                        padding: "20px 0 0 0",
+                        gap: "10px"
+                    }
+                }>
                     <input
                         type="email"
                         value={email}
@@ -116,6 +130,6 @@ export default function SignUp() {
                 <button onClick={() => { setIsOpen(true) }}>Registrar</button>
                 <Link className="formA" to={"/login"}>Já tem uma conta?</Link>
             </div>
-        </Container>
+        </div>
     </>
 }

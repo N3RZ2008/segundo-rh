@@ -3,7 +3,8 @@ import { Link, useNavigate } from "react-router-dom"
 
 import { signIn, signOut } from "../../auth/useAuth"
 
-import { Container } from "../pageComponents"
+import bg from "../../assets/bg.jpg"
+import "../styles/form.css"
 
 export default function Login({ logout = false }) {
     const [email, setEmail] = useState("")
@@ -35,16 +36,29 @@ export default function Login({ logout = false }) {
 
     return (
         <>
-            <Container style={
-                { height: "70vh", flexDirection: "column", alignItems: "center", }
+            <div style={
+                {
+                    display: "flex",
+                    justifyContent: "center",
+                    height: "70vh",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    backgroundImage: `url(${bg})`
+                }
             }>
-                <div style={
-                    { display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "10px" }
-                }>
+                <div className="formDiv">
                     <h1 style={
-                        { fontSize: "4rem", }
+                        { fontSize: "5rem", }
                     }>Logar</h1>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} style={
+                        {
+                            display: "flex",
+                            flexDirection: "column",
+                            padding: "20px 0",
+                            gap: "10px",
+                            alignItems: "center"
+                        }
+                    }>
                         <input
                             type="email"
                             value={email}
@@ -57,11 +71,13 @@ export default function Login({ logout = false }) {
                             onChange={e => { setPassword(e.target.value) }}
                             placeholder="Senha"
                         />
-                        <button type="submit">Logar</button>
+                        <button type="submit" style={
+                            { width: "fit-content" }
+                        }>Logar</button>
                     </form>
                     <Link className="formA" to={"/signup"}>Não tem uma conta?</Link>
                 </div>
-            </Container>
+            </div>
         </>
     )
 }
