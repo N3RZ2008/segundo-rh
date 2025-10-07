@@ -11,15 +11,11 @@ export default function Homepage() {
                 <Container style={
                     { flexDirection: 'column' }
                 }>
-                    <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Paragraph>
+                    <Paragraph>A EMPRESA JÚNIOR DE CAPACITAÇÃO DA ETEC</Paragraph>
                     <Title style={{
                         fontSize: "4rem",
-                    }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Title>
-                    <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Paragraph>
-                    <Container>
-                        <Button>Lorem Ipsum</Button>
-                        <Button>Lorem Ipsum</Button>
-                    </Container>
+                    }}>Aprendizagem acelerada com a Capacta Aí</Title>
+                    <Paragraph>Com os melhores ensinamentos e capacitações, com vídeo-aulas, provas e palestras, para um melhor desesmpenho</Paragraph>
                 </Container>
                 <Container style={{
                     "height": "100%"
